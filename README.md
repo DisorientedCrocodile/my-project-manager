@@ -7,6 +7,8 @@ Follow my twitch channel, I sometimes do programming streams: <b><a href="https:
 # Changelog
 * Version 0.1.0
     * Made beginning of gui and connected it with a class (1st stream)
+* Version 0.2.0
+    * Made semi working last change time displays and moved the choosable path from a .txt file to a .json (2nd stream + a 5 minute ending stream cause laptop crashed)
 
 # Made by
 DisorientedCrocodile
