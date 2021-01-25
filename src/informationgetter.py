@@ -2,7 +2,8 @@ import json
 import os
 
 basepath = os.path.dirname(__file__)
-filepath = os.path.abspath(os.path.join(basepath, "..", "path.json"))
+filepath = os.path.abspath(os.path.join(basepath, "path.json"))
+filepath_status = os.path.abspath(os.path.join(basepath, "status.json"))
 
 with open(filepath, "r") as f:
     try:
@@ -15,10 +16,8 @@ class InformationGetter():
         with open(filepath, "r") as f:
             projectpath = json.load(f)["path"]
         self.folderpath = projectpath
+        self.statusvariants = ["In progress", "Done"]
         os.chdir(os.path.abspath(self.folderpath))
-    
-    def confirm(self):
-        print("Everything should be working")
 
     def returnlist(self):
         return os.listdir(self.folderpath)
@@ -27,5 +26,22 @@ class InformationGetter():
         last_change_time = []
         for folder in self.returnlist():
             last_change_time.append(os.path.getmtime(self.folderpath + '\\' + folder))
-        print(last_change_time)
         return last_change_time
+
+    def load_statuses(self):
+        try:    
+            statuses = json.load(open(filepath_status, "r"))
+        except json.decoder.JSONDecodeError:
+            json.dump({"empty" : True}, open(filepath_status, "w"), indent = 4)
+            statuses = json.load(open(filepath_status, "r"))
+        
+        if statuses == {"empty" : True}:
+            to_dump = {}
+            for folder in self.returnlist():
+                to_dump[folder] = self.statusvariants[0]
+
+            json.dump(to_dump, open(filepath_status, "w"), indent = 4)
+        
+            return json.load(open(filepath_status, "r"))
+        else:
+            return statuses
