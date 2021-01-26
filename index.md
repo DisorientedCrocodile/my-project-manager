@@ -1,4 +1,3 @@
-﻿<!DOCTYPE html>
 <html>
     <body>
         <h1>ProjectManager v1.1.1</h1>
