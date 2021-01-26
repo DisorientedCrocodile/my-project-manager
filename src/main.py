@@ -41,7 +41,7 @@ title = Label(text = "ProjectManager", font = ('Comic Sans MS', 15))
 title.configure(background = "#1abc9c")
 title.grid(row = 0, column = 0, columnspan = 2)
 
-version = Label(text = "v0.2.0", font = ('Comic Sans MS', 15))
+version = Label(text = "v1.1.1", font = ('Comic Sans MS', 15))
 version.configure(background = "#1abc9c")
 version.grid(row = 0, column = 3, sticky = E)
 
