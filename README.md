@@ -11,6 +11,8 @@ Follow my twitch channel, I sometimes do programming streams: <b><a href="https:
     * Made semi working last change time displays and moved the choosable path from a .txt file to a .json (2nd stream + a 5 minute ending stream cause laptop crashed)
 * Version 1.0.0
     * First working version. Has chanegable project statuses.
+* Version 1.1.0
+    * Made it so the exe version of the program works. 
 
 # Made by
 DisorientedCrocodile
