@@ -1,5 +1,6 @@
-from tkinter import (filedialog , Button, W, E, Label, Tk, messagebox) 
-from informationgetter import *
+from tkinter import filedialog , Button, W, E, Label, Tk, messagebox
+from informationgetter import InformationGetter
+from pathgetter import getprojectspath, getprojectspath_window, filepath_status
 from datetime import datetime
 import tzlocal
 import json

@@ -1,6 +1,6 @@
 import json
 import os
-from pathgetter import *
+from pathgetter import filepath, filepath_status, getpath, getstatuses
 
 class InformationGetter():
     def __init__(self, folderpath):
