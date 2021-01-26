@@ -17,6 +17,8 @@ Follow my twitch channel, I sometimes do programming streams: <b><a href="https:
     * First working version. Has chanegable project statuses.
 * Version 1.1.0
     * Made it so the exe version of the program works. 
+* Version 1.1.1
+    * Fixed version label
 
 # Made by
 DisorientedCrocodile
