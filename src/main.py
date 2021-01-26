@@ -10,41 +10,14 @@ root.title("ProjectManager")
 root.configure(background="#1abc9c")
 
 # needed global variables
-projectpath = ""
 rownum = 1
 local_timezone = tzlocal.get_localzone()
 folder_id = 0
 label_dict = {}
 label_list = []
 
-# asking for 'projects' folder path 
-def getprojectspath_window():
-    global projectpath
-    global filepath
-
-    projectpath = filedialog.askdirectory()
-    to_dump = {
-        "path" : projectpath
-    }
-    with open(filepath, "w") as f:
-        json.dump(to_dump, f, indent=4)
-        print("debug")
-    messagebox.showinfo(title="Restart", message="Please restart the application if it crashes now")
-    return projectpath
-
-# getting 'projects' folder path, if it isnt there we ask for it
-def getprojectspath():
-    global projectpath
-    global filepath
-
-    with open(filepath, "r") as f:
-        try:
-            projectpath = json.load(f)
-            return projectpath.get("path")
-        except:
-            return ""
-
 def change_status(folder_id):
+    print("change status func")
     to_dump = infoget.load_statuses()
     folder_list = infoget.returnlist()
     if to_dump[folder_list[folder_id]] == "In progress":
