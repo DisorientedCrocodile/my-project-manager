@@ -1,6 +1,10 @@
 # my-project-manager
 This is a tkinter app that shows your projects. You will be able to change the status of these projects.
 
+# How to use
+To open the program, download the .zip file and open it. There, you'll need to find the `ProjectManager v1.0.0.exe` file. Open it and choose your 'projects' folder. Don't be afraid of the "Failed to execute script main" error. That's supposed to happen :-)
+Restart the program and you're all set!
+
 # I'm programming some of this on stream
 Follow my twitch channel, I sometimes do programming streams: <b><a href="https://www.twitch.tv/disorientedcrocodile">here</b>
 
